@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+    <Name>Gridcoin-Wallet-NoVNC</Name>
+    <Repository>ghcr.io/jstebenne/gridcoin-wallet-novnc:latest</Repository>
+    <Registry>https://ghcr.io</Registry>
+    <Network>bridge</Network>
+    <MyIP/>
+    <Shell>bash</Shell>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/YOURUSER/gridcoin-unraid</Support>
+    <Project>https://github.com/YOURUSER/gridcoin-unraid</Project>
+    <Overview>Gridcoin GUI in an XFCE desktop with VNC and noVNC access.</Overview>
+    <Category>Network:Crypto</Category>
+    <WebUI>http://[IP]:[PORT:6901]/vnc.html?autoconnect=true&amp;resize=remote</WebUI>
+    <TemplateURL>https://raw.githubusercontent.com/YOURUSER/gridcoin-unraid/main/gridcoin-gui.xml</TemplateURL>
+    <Icon>https://raw.githubusercontent.com/YOURUSER/gridcoin-unraid/main/icons/gridcoin.png</Icon>
+
+    <Config Name="noVNC Web Port" Target="6901" Default="6901" Mode="tcp" Description="Browser access to desktop" Type="Port" Display="always" Required="true" Mask="false">6901</Config>
+    <Config Name="VNC Port" Target="5901" Default="5901" Mode="tcp" Description="Direct VNC access" Type="Port" Display="advanced" Required="true" Mask="false">5901</Config>
+    <Config Name="Gridcoin TCP Port" Target="32749" Default="32749" Mode="tcp" Description="Gridcoin peer-to-peer network port" Type="Port" Display="advanced" Required="false" Mask="false">32749</Config>
+    <Config Name="Gridcoin RPC Port" Target="15715" Default="15715" Mode="tcp" Description="Gridcoin JSON-RPC port" Type="Port" Display="advanced" Required="false" Mask="false">15715</Config>
+
+    <Config Name="VNC Password" Target="VNC_PW" Default="vncpassword" Mode="" Description="Password used for VNC and noVNC login" Type="Variable" Display="always" Required="true" Mask="true">vncpassword</Config>
+    <Config Name="Screen Resolution" Target="VNC_RESOLUTION" Default="1280x1024" Mode="" Description="Desktop resolution for the VNC session, for example 1280x1024 or 1920x1080" Type="Variable" Display="always" Required="true" Mask="false">1280x1024</Config>
+
+    <Config Name="Gridcoin Appdata" Target="/headless/.GridcoinResearch" Default="/mnt/user/appdata/gridcoin-wallet-novnc" Mode="rw" Description="Persistent Gridcoin wallet and config data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/gridcoin</Config>
+    <Config Name="BOINC Data Dir" Target="/var/lib/boinc-client" Mode="rw" Description="Persistent BOINC data directory" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/gridcoin/boinc</Config>
+</Container>

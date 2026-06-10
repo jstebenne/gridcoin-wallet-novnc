@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Gridcoin
+Exec=/usr/bin/gridcoinresearch
+Terminal=false
+X-GNOME-Autostart-enabled=true
+OnlyShowIn=XFCE;
