@@ -24,5 +24,5 @@
     <Config Name="Screen Resolution" Target="VNC_RESOLUTION" Default="1280x1024" Mode="" Description="Desktop resolution for the VNC session, for example 1280x1024 or 1920x1080" Type="Variable" Display="always" Required="true" Mask="false">1280x1024</Config>
 
     <Config Name="Gridcoin Appdata" Target="/headless/.GridcoinResearch" Default="/mnt/user/appdata/gridcoin-wallet-novnc" Mode="rw" Description="Persistent Gridcoin wallet and config data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/gridcoin</Config>
-    <Config Name="BOINC Data Dir" Target="/var/lib/boinc-client" Mode="rw" Description="Persistent BOINC data directory" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/gridcoin/boinc</Config>
+    <Config Name="BOINC Data Dir" Target="/var/lib/boinc-client" Mode="ro" Description="Persistent BOINC data directory" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/gridcoin/boinc</Config>
 </Container>
